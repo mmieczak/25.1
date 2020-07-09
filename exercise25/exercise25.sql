@@ -3,10 +3,10 @@
 CREATE TABLE pracownik(
 	id BIGINT PRIMARY KEY AUTO_INCREMENT,
 	imie VARCHAR(50) NOT NULL,
-    nazwisko VARCHAR(50) NOT NULL,
-    wyplata DECIMAL(15,2),
+	nazwisko VARCHAR(50) NOT NULL,
+	wyplata DECIMAL(15,2),
 	data_urodzenia DATE,
-    stanowisko VARCHAR(50));
+    	stanowisko VARCHAR(50));
 
 #2.Wstawia do tabeli co najmniej 6 pracowników
 
@@ -64,11 +64,11 @@ miejscowosc VARCHAR(50));
 CREATE TABLE pracownik(
 	id BIGINT PRIMARY KEY AUTO_INCREMENT,
 	imie VARCHAR(50) NOT NULL,
-    nazwisko VARCHAR(50) NOT NULL,
-    stanowisko_id BIGINT NOT NULL,
-    adres_id BIGINT NOT NULL,
-    FOREIGN KEY(stanowisko_id) REFERENCES stanowisko(id),
-    FOREIGN KEY(adres_id) REFERENCES adres(id));
+    	nazwisko VARCHAR(50) NOT NULL,
+    	stanowisko_id BIGINT NOT NULL,
+    	adres_id BIGINT NOT NULL,
+    	FOREIGN KEY(stanowisko_id) REFERENCES stanowisko(id),
+    	FOREIGN KEY(adres_id) REFERENCES adres(id));
     
 #12.Dodaje dane testowe (w taki sposób, aby powstały pomiędzy nimi sensowne powiązania)
 
